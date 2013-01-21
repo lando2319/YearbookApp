@@ -1,5 +1,4 @@
-# require 'open-uri'
-# Does Rails 3.2 automatically do this too?
+require 'open-uri'
 
 class Student
   attr_accessor "name"
@@ -29,19 +28,5 @@ class Student
     @section = the_section
     @photo_url = pic_url
     @twitter = handle
-  end
-
-  def introduce
-    if @twitter == ""
-      return "      <li>
-                      <img src='#{@photo_url}'>
-                      <h3>#{@name}</h3>
-                    </li>"
-    else
-      return "      <li>
-                      <img src='#{@photo_url}'>
-                      <h3><a href='https://twitter.com/#{@twitter}'>#{@name}</a></h3>
-                    </li>"
-    end
   end
 end

@@ -1,0 +1,8 @@
+<ul>
+<% @students.each do |student| %>
+  <li>
+    <img src='<%= student.photo_url %>'>
+    <h3><%= student.name %></h3>
+  </li>
+<% end %>
+</ul>
