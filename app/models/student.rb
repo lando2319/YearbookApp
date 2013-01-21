@@ -4,6 +4,13 @@ class Student
   attr_accessor "section"
   attr_accessor "twitter"
 
+  def initialize(the_name, the_section, pic_url, handle)
+    @name = the_name
+    @section = the_section
+    @photo_url = pic_url
+    @twitter = handle
+  end
+
   def introduce
     if @twitter == ""
       return "      <li>

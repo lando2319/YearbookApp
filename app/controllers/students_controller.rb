@@ -9,11 +9,10 @@ class StudentsController < ApplicationController
 
     @students = Array.new
     student_hashes.each do |student_hash|
-      s = Student.new
-      s.name = student_hash["name"]
-      s.twitter = student_hash["twitter"]
-      s.section = student_hash["section"]
-      s.photo_url = student_hash["photo_url"]
+      s = Student.new(student_hash["name"],
+                      student_hash["twitter"],
+                      student_hash["section"],
+                      student_hash["photo_url"])
 
       @students << s
     end
