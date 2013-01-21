@@ -1,1 +1,7 @@
 <h1>PM Dev Students</h1>
+
+<ul>
+<% @students.each do |student| %>
+  <li><%= student.name %></li>
+<% end %>
+</ul>
